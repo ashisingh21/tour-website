@@ -117,7 +117,7 @@ body {
   margin-bottom: 4rem !important; }
   @media (max-width: 56.25rem) {
     .u-margin-bottom-medium {
-      margin-bottom: 3rem !important; } }
+      margin-bottom: 2.5rem !important; } }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
@@ -868,6 +868,10 @@ body {
   z-index: 5000;
   opacity: 0;
   visibility: hidden; }
+  @media (max-width: 56.25rem) {
+    .popup {
+      text-align: center;
+      overflow: auto; } }
   .popup__content {
     background-color: #fff;
     width: 75%;
@@ -883,23 +887,51 @@ body {
     @media (max-width: 75rem) {
       .popup__content {
         width: 85%; } }
+    @media (max-width: 56.25rem) {
+      .popup__content {
+        width: 90%; } }
+    @media (max-width: 37.5rem) {
+      .popup__content {
+        width: 95%; } }
   .popup__image {
     display: block;
-    width: 100%; }
+    width: 100%;
+    height: auto; }
+    @media (max-width: 56.25rem) {
+      .popup__image {
+        display: inline;
+        max-width: 49%; } }
   .popup__left {
     width: 33.33333%;
     display: table-cell;
     vertical-align: middle; }
+    @media (max-width: 56.25rem) {
+      .popup__left {
+        display: block;
+        width: 100%; }
+        .popup__left::after {
+          content: "";
+          clear: both;
+          display: table; } }
   .popup__right {
     width: 66.66667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 4rem; }
+    @media (max-width: 56.25rem) {
+      .popup__right {
+        padding: 1.5rem;
+        display: block;
+        width: 100%; } }
   .popup__text {
     font-size: 1.4rem;
     column-count: 2;
     column-gap: 4rem;
     column-rule: 1px solid #eee; }
+    @media (max-width: 56.25rem) {
+      .popup__text {
+        column-count: 1;
+        text-align: left; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -919,6 +951,9 @@ body {
     right: 1.5rem;
     text-decoration: none;
     transition: all 0.8s; }
+    @media (max-width: 56.25rem) {
+      .popup__close {
+        color: #fff; } }
     .popup__close:hover {
       color: #fff;
       background-color: #55c57a; }
