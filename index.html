@@ -16,6 +16,21 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" id="navi__toggle" class="navigation__checkbox">
+        <label class="navigation__button" for="navi__toggle"><span class="navigation__icon">&nbsp;</span></label>
+        <div class="navigation__background"></div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a class="navigation__link" href="#"><span>01</span>About Natous</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#"><span>02</span>Your benfits</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#"><span>03</span>Popular tours</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#"><span>04</span>Stories</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="#"><span>05</span>Book now</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <header class="header">
         <div class="header__logo-box">
             <img class="header__logo" src="img/logo-white.png" alt="Outdoor" />
@@ -26,7 +41,7 @@
                 <span class="heading-primary--sub">is where life happens</span>
             </h1>
             <div>
-                <a class="btn btn--white btn--animated" href="hirhgiurg">Discover our tours</a>
+                <a class="btn btn--white btn--animated" href="#popup">Discover our tours</a>
             </div>
 
         </div>
@@ -133,7 +148,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section id="section-tours" class="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">Most popular tours</h2>
             </div>
@@ -290,34 +305,118 @@
             <div class="row">
                 <div class="book">
                     <div class="book__form">
-                        <div class="u-center-text u-margin-bottom-medium">
-                            <h2 class="heading-secondary">Start booking now</h2>
-                        </div>
-                        <div class="form">
-                            <div class="form-group">
-                                <input type="text" id="name" class="form-input" placeholder="Full name">
+                        <form action="#" class="form">
+                            <div class="u-margin-bottom-medium">
+                                <h2 class="heading-secondary">Start booking now</h2>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" id="name" class="form__input" placeholder="Full name">
                                 <label class="form-label" for="name">Full name</label>
                             </div>
-                            <div class="form-group">
-                                <input type="text" id="email" class="form-input" placeholder="Email address">
+                            <div class="form__group">
+                                <input type="text" id="email" class="form__input" placeholder="Email address">
                                 <label class="form-label" for="email">Email address</label>
                             </div>
-                        </div>
-                        <!--                    
+                            <div class="form__group u-margin-bottom-medium">
+                                <div class="form_radio_group">
+                                    <input type="radio" class="form_radio_input" id="small" name="size">
+                                    <label for='small' class="form_radio_label">
+                                        <span class="form__radio-button"></span>
+                                        Small tour group
+                                    </label>
+                                </div>
+                                <div class="form_radio_group">
+                                    <input type="radio" class="form_radio_input" id="big" name="size">
+                                    <label for="big" class="form_radio_label"><span
+                                            class="form__radio-button"></span>Big
+                                        tour group</label>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <a class="btn btn--green btn--animated" href="hirhgiurg">Next Step &Rarr;</a>
+                            </div>
+                        </form>
 
-
-                        <input type="radio" id="html" name="fav_language" value="small_tour_group">
-                        <label for="html">Small tour group</label><br>
-                        <input type="radio" id="html" name="fav_language" value="large_tour_group">
-                        <label for="html">Large tour group</label><br> -->
-                        <div class="u-center-text">
-                            <a class="btn btn--green btn--animated" href="hirhgiurg">Next Step &Rarr;</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo__box">
+            <img class="footer__logo" src="img/logo-green-2x.png">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__navigation__list">
+                        <li class="footer__item"><a class="footer__link" href="#">company</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">contact us</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">carrers</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">privacy policy</a></li>
+                        <li class="footer__item"><a class="footer__link" href="#">terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <div class="footer__copyright">
+                    <p>
+                        Built by <a href="" class="footer__link"> Jonas Schmedtmann </a> for his online course Advanced
+                        CSS and Sass. Copyright © by
+                        Jonas
+                        Schmedtmann. You are 100%
+                        allowed to use this webpage for both personal and commercial use, but NOT to claim it as
+                        your
+                        own
+                        design. A credit to
+                        the original author, Jonas Schmedtmann, is of course highly appreciated!
+
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </footer>
+
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img class="popup__image" src="img/nat-7.jpg">
+                <img class="popup__image" src="img/nat-8.jpg">
+            </div>
+            <div class="popup__right">
+                <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important Please read these terms before booking
+                </h3>
+                <a href="#section-tours" class="popup__close">X</a>
+                <p class="popup__text u-margin-bottom-medium ">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor
+                    incididunt ut labore
+                    et dolore magna
+                    aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis
+                    mauris sit amet massa
+                    vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae
+                    semper quis lectus
+                    nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque
+                    penatibus et. Proin
+                    fermentum leo vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper.
+                    Molestie at elementum eu
+                    facilisis sed odio morbi quis. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget.
+                    Nam libero justo
+                    laoreet sit. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis
+                    magna etiam. Imperdiet
+                    sed euismod nisi porta.</p>
+
+                <a href="" class="btn btn--text btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
     <!-- 
     <div class="grid">
         <div class="row">

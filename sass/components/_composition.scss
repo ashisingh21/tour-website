@@ -1,6 +1,7 @@
 .composition {
   position: relative;
   &__photo {
+    display: inline-block;
     width: 55%;
     position: absolute;
     transition: all 0.2s;
@@ -8,27 +9,63 @@
     z-index: 10;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
     outline-offset: 1.5rem;
+    @include respond(tab-port) {
+      & {
+        width: 33%;
+        position: relative;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, 0.4);
+      }
+    }
     &:hover {
       transform: scale(1.1);
       z-index: 20;
       outline: 20px solid $color-primary-dark;
       box-shadow: 0 2rem 3rem rgba($color-black, 0.5);
+      @include respond(tab-port) {
+        & {
+        }
+      }
     }
   }
   &__photo1 {
     top: -2rem;
     left: 0;
+    @include respond(tab-port) {
+      & {
+        top: 0;
+        transform: scale(1.1);
+      }
+    }
   }
   &__photo2 {
     top: 2.5rem;
     right: 0;
+    @include respond(tab-port) {
+      & {
+        top: -2rem;
+        transform: scale(1.1);
+        z-index: 100;
+      }
+    }
   }
   &__photo3 {
     top: 9rem;
     left: 10rem;
+    @include respond(tab-port) {
+      & {
+        top: 0;
+        left: 0;
+        transform: scale(1.1);
+      }
+    }
   }
 
   &:hover &__photo:not(:hover) {
     transform: scale(0.85);
+
+    @include respond(tab-port) {
+      & {
+      }
+    }
   }
 }

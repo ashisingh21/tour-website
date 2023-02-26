@@ -167,4 +167,62 @@
     font-size: 6rem;
     font-weight: 100;
   }
+
+  // FOR SMALL PHONE ------------------------------------------------------------------------------------------------
+
+  @include respond(tab-port) {
+    & {
+      height: auto;
+
+      border-radius: 3px;
+    }
+
+    &__side {
+      height: auto;
+      position: relative;
+
+      &--front {
+        background-color: $color-white;
+        padding-bottom: 5rem;
+      }
+      &--back {
+        transform: rotateY(0deg);
+        margin-top: -5rem;
+        clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+    &:hover &__side--back {
+      transform: rotateY(0deg);
+    }
+
+    // Image
+    &__image {
+      height: 23rem;
+    }
+
+    &__details {
+      padding: 0;
+    }
+
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      text-align: center;
+      width: 100%;
+      padding: 4rem 0;
+    }
+    &__price-box {
+      margin: 0.5rem;
+    }
+
+    &__price-value {
+      font-size: 5rem;
+    }
+  }
 }

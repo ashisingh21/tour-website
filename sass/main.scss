@@ -9,6 +9,9 @@
 
 @import "layouts/header";
 @import "layouts/grid";
+@import "layouts/footer";
+@import "layouts/navigation";
+
 @import "pages/home";
 
 @import "components/button";
@@ -18,3 +21,4 @@
 @import "components/story";
 @import "components/video";
 @import "components/form";
+@import "components/popup";
